@@ -16,8 +16,22 @@ public:
 cout << "Imię i nazwisko: "<< name << " " << surname;
 };
 
+
 void showAllData(){
-    cout << "\n\nImię i nazwisko: " << name << " " << surname <<  "\n" << "Narodowość:" << nationality << ", rok urodzenia: " << yearBirthday << "\nWzrost:" << height << ", płeć:" << gender;
+    string genderDescription;
+    switch(gender){
+    case 'm':
+        genderDescription=" Mężczyzna";
+        break;
+    case 'w':
+        genderDescription=" Kobieta";
+        break;
+    default:
+        genderDescription="-";
+
+    }
+
+    cout << "\n\nImię i nazwisko: " << name << " " << surname <<  "\n" << "Narodowość:" << nationality << ", rok urodzenia: " << yearBirthday << "\nWzrost:" << height << ", płeć:" << genderDescription;
     };
 
 
@@ -29,7 +43,9 @@ int main(int argc, char** argv) {
     Worker pracownik;
     pracownik.name="Jan";
     pracownik.surname="Kowalski";
-    cout << pracownik.name << endl << endl;
+    pracownik.gender='m';
+    pracownik.height=188.6;
+    pracownik.nationality="Polak"
     pracownik.showNameSurname();
     pracownik.showAllData();
 };
