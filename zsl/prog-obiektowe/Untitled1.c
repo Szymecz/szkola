@@ -32,5 +32,6 @@ int main(int argc, char** argv) {
     cout << pracownik.name << endl << endl;
     pracownik.showNameSurname();
     pracownik.showAllData();
-}
+};
+
 
